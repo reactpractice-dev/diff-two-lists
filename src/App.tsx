@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const compareLists = (left: string, right: string) => {
-  const leftItems = left.split("\n").map((item) => item.trim());
-  const rightItems = right.split("\n").map((item) => item.trim());
+  const leftItems = left.split("\n").map((item) => item.trim().toLowerCase());
+  const rightItems = right.split("\n").map((item) => item.trim().toLowerCase());
 
   const allItems = Array.from(new Set([...leftItems, ...rightItems]));
 
